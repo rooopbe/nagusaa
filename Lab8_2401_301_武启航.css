@@ -1,0 +1,94 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f9fc;
+  text-align: center;
+  margin: 0;
+  padding: 30px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #333;
+}
+
+.student-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.student-list .student {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.2s ease;
+  font-size: 16px;
+}
+
+/* 进行中高亮动画 */
+.student-list .active {
+  background-color: #55ff00;
+  animation: pulse 0.3s infinite alternate;
+  transform: scale(1.2);
+}
+
+.student-list .highlight {
+  background-color: #ff557f;
+  color: #ffffff;
+  transform: scale(2);
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(255, 170, 255, 0.8);
+  z-index: 1;
+}
+
+.student-list .bounce {
+  animation: bounce 0.5s ease;
+}
+
+.controls button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.selected {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #aa0000;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    background-color: #f0c;
+  }
+  to {
+    transform: scale(1.3);
+    background-color: #fae;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(2) translateY(0);
+  }
+  50% {
+    transform: scale(2.2) translateY(-10px);
+  }
+  100% {
+    transform: scale(2) translateY(0);
+  }
+}
+
